@@ -87,4 +87,12 @@ var finances = [
     ['Jan-2017', 138230],
     ['Feb-2017', 671099],
   ];
+
+  //This is the variables used to store results of analysis
+  var totalMonths = finances.length; // number of total months
+  var totalProfitsLosses = 0; // total amount of P&L
+  var totalChange = 0; // total change in profit month to month
+  var greatestIncrease = { amount: 0 } // tracks greatest profit increase
+  var greatestDecrease = { amount: 0 } // tracks greatest loss
+
   
