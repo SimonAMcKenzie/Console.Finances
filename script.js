@@ -95,4 +95,14 @@ var finances = [
   var greatestIncrease = { amount: 0 } // tracks greatest profit increase
   var greatestDecrease = { amount: 0 } // tracks greatest loss
 
+ //This is the for loop to do the calculations 
+ for (var i = 0; i < totalMonths; i++) { //i++ to add up in increments, as i-- would do teh opposite
+  //to calculate total profits and losses
+  totalProfitsLosses += finances[i][1]; //Using plus and minus tells the script to go to the first row and grab the financial figure
+
+  //caclulates fron the 2nd month all changes month to month
+  if (i > 0){
+  totalChange += finances[i][1] - finances[i - 1][1];
+  }
+
   
