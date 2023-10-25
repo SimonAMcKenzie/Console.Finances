@@ -101,12 +101,12 @@ var finances = [
   totalProfitsLosses += finances[i][1]; //Using plus and minus tells the script to go to the first row and grab the financial figure
 
   //Calculates fron the 2nd month all changes month to month
-  if (i > 0){
+  if (i > 0) {
   totalChange += finances[i][1] - finances[i - 1][1];
   }
 
   //Looks for greatest increase in profits
-  if (finances[i][1] - finances[i - 1][1]> greatestIncrease.amount) {
+  if (finances[i][1] - finances[i - 1][1] > greatestIncrease.amount) {
     greatestIncrease.amount = finances[i][1] - finances[i - 1][1];
     greatestIncrease.date = finances[i][0];
   }
@@ -118,7 +118,7 @@ var averageChange = totalChange / (totalMonths - 1);
 //To see financial analysis results
 console.log("Financial Analysis"); //This displays the Title for the report Financial Analysis
 console.log("Total Months:" + totalMonths); //This displays the subheading Total Months and number of months for the report
-console.log("Total:$" + averageChange.toFixed(2)); //This displays the subheading Total the total average change dollar figure rounded to 2 decimal places
+console.log("Total: $" + totalProfitsLosses); //This displays the subheading Total and the total profits/losses dollar figure 
 console.log("Average Change: $" + averageChange.toFixed(2)); //This displays the subheading Average Change and the average change dollar figure rounded to 2 decimal places
 console.log("Greatest Increase in Profit/Losses:" + greatestIncrease.date + "($" + greatestIncrease.amount + ")"); //This displays the subheading Greatest InCrease In Profit/Losses, the date, and the dollar figure
 console.log("Greatest Decrease in Profit/Losses:" + greatestDecrease.date + "($" + greatestDecrease.amount + ")"); //This displays the subheading Greatest Decrease In Profit/Losses, the date,  and the dollar figure
