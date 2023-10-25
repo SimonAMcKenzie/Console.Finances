@@ -112,5 +112,7 @@ var finances = [
   }
  }
 
- 
+ // Calculates average change in profits/losses
+var averageChange = totalChange / (totalMonths - 1);
+
 
