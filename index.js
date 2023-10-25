@@ -106,7 +106,7 @@ var finances = [
   }
 
   //Looks for greatest increase in profits
-  if (finances[i][1] - finances[i - 1][1] > greatestIncrease.amount) {
+  if (finances[i][1] - finances[i - 1][1] < greatestIncrease.amount) {
     greatestIncrease.amount = finances[i][1] - finances[i - 1][1];
     greatestIncrease.date = finances[i][0];
   }
