@@ -38,6 +38,10 @@ Here is a screenshot
 
 ![Full Landing Page](/images/screenshot.PNG)
 
+- [URL](https://simonamckenzie.github.io/Console.Finances/) - Link to the deployed page
+
+- [GitHub](https://github.com/SimonAMcKenzie/Console.Finances) - Link to the repository 
+
 ## Credits
 
 - [W3schools](https://www.w3schools.com/jsref/jsref_obj_array.asp) - For providing access to practice materials for creating arrays
