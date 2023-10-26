@@ -88,40 +88,53 @@ var finances = [
     ['Feb-2017', 671099],
   ];
 
-  //This is the variables used to store results of analysis
-  var totalMonths = finances.length; // number of total months
-  var totalProfitsLosses = 0; // total amount of P&L
-  var totalChange = 0; // total change in profit month to month
-  var greatestIncrease = { amount: 0 } // tracks greatest profit increase
-  var greatestDecrease = { amount: 0 } // tracks greatest loss
+  // Variables used to store results of analysis
+var totalMonths = finances.length; // number of total months
+var totalProfitsLosses = 0; // total amount of P&L
+var totalChange = 0; // total change in profit month to month
+var greatestIncrease = { amount: 0 }; // tracks greatest profit increase
+var greatestDecrease = { amount: 0 }; // tracks greatest loss
 
-  //This is the for loop to do the calculations 
- for (var i = 0; i < totalMonths; i++) { //i++ to add up in increments, as i-- would do teh opposite
-  //to calculate total profits and losses
-  totalProfitsLosses += finances[i][1]; //Using plus and minus tells the script to go to the first row and grab the financial figure
+// For loop to do the calculations
+for (var i = 0; i < totalMonths; i++) {
+  // Calculate total profits and losses
+  totalProfitsLosses += finances[i][1];
 
-  //Calculates fron the 2nd month all changes month to month
+  // Calculate changes month to month (starting from the second month)
   if (i > 0) {
-  totalChange += finances[i][1] - finances[i - 1][1];
-  }
+    totalChange += finances[i][1] - finances[i - 1][1];
 
-  //Looks for greatest increase in profits
-  if (finances[i][1] - finances[i - 1][1] < greatestIncrease.amount) {
-    greatestIncrease.amount = finances[i][1] - finances[i - 1][1];
-    greatestIncrease.date = finances[i][0];
-  }
- }
+    // Find greatest increase in profits
+    if (finances[i][1] - finances[i - 1][1] > greatestIncrease.amount) {
+      greatestIncrease.amount = finances[i][1] - finances[i - 1][1];
+      greatestIncrease.date = finances[i][0];
+    }
 
- // Calculates average change in profits/losses
+    // Find greatest decrease in profits
+    if (finances[i][1] - finances[i - 1][1] < greatestDecrease.amount) {
+      greatestDecrease.amount = finances[i][1] - finances[i - 1][1];
+      greatestDecrease.date = finances[i][0];
+    }
+  }
+}
+
+// Calculate average change in profits/losses
 var averageChange = totalChange / (totalMonths - 1);
 
-//To see financial analysis results
-console.log("Financial Analysis"); //This displays the Title for the report Financial Analysis
-console.log("Total Months:" + totalMonths); //This displays the subheading Total Months and number of months for the report
-console.log("Total: $" + totalProfitsLosses); //This displays the subheading Total and the total profits/losses dollar figure 
-console.log("Average Change: $" + averageChange.toFixed(2)); //This displays the subheading Average Change and the average change dollar figure rounded to 2 decimal places
-console.log("Greatest Increase in Profit/Losses:" + greatestIncrease.date + "($" + greatestIncrease.amount + ")"); //This displays the subheading Greatest InCrease In Profit/Losses, the date, and the dollar figure
-console.log("Greatest Decrease in Profit/Losses:" + greatestDecrease.date + "($" + greatestDecrease.amount + ")"); //This displays the subheading Greatest Decrease In Profit/Losses, the date,  and the dollar figure
+// Display financial analysis results
+console.log("Financial Analysis");
+console.log("----------------");
+console.log("Total Months: " + totalMonths);
+console.log("Total: $" + totalProfitsLosses);
+console.log("Average Change: $" + averageChange.toFixed(2));
+console.log("Greatest Increase in Profit/Losses: " + greatestIncrease.date + " ($" + greatestIncrease.amount + ")");
+console.log("Greatest Decrease in Profit/Losses: " + greatestDecrease.date + " ($" + greatestDecrease.amount + ")");
+
+
+
+
+
+
 
 
 
