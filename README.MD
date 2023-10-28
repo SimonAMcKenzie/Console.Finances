@@ -1,5 +1,6 @@
 # Financial Analysis Project
 
+## Project Description
 This project involved analysing financial data using JavaScript to gain insights into how to use it for calculations. Here's what I did, why I did it, and how I accomplished the task:
 
 ## What I Did
@@ -12,6 +13,8 @@ I undertook this task to practice my JavaScript skills and gain a better underst
 
 ## How I Did It
 
+Below I have outlined the steps taken to complete the assigned task:
+
 ### Dataset
 I started with the dates and corresponding figures provided, plus the html file needed for Google Console to output the data. 
 
@@ -22,15 +25,18 @@ I started with the dates and corresponding figures provided, plus the html file 
 4. **Greatest Increase/Decrease:** I determined the greatest increase and decrease in profits/losses by comparing the differences between consecutive months.
 
 ### Displaying Results
-I used `console.log()` statements to display the results of the analysis in the console. This allowed me to view the financial metrics directly in the browser's developer tools.
+I then used `console.log()` statements to display the results of the analysis in the console. This allowed me to view the financial metrics directly in the browser's developer tools.
+
 
 ## Technologies Used
 
 - JavaScript
 
+
 ## Installation
 
 Not applicable for this project other than creating the files.
+
 
 ## Proof of Completion
 
@@ -52,8 +58,9 @@ Here is a screenshot
 
 - [edX](https://bootcampspot.instructure.com/) - For providing the ability to rewatch classes to go back over what was learned plus the exercises in the shared class repository 
 
-- [Claire Fraser](https://github.com/ClaireFraser121) - For helping me not pull my hair out
+- [OpenLab website](https://openlab.bmcc.cuny.edu/mmp-240-fall-19-stein/2019/09/05/basic-website-folder-file-structure/1) - For pointing me in the right direction on best practice structuring a website repository
 
+- [Claire Fraser](https://github.com/ClaireFraser121) - For helping me not pull my hair out
 
 
 ## License
