@@ -36,7 +36,7 @@ Not applicable for this project other than creating the files.
 
 Here is a screenshot
 
-![Full Landing Page](/images/screenshot.PNG)
+![Full Landing Page](/assets/images/screenshot.PNG)
 
 - [URL](https://simonamckenzie.github.io/Console.Finances/) - Link to the deployed page
 
